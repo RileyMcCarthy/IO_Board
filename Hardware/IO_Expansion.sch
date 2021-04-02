@@ -261,9 +261,9 @@ F 3 "" H 2150 3075 50  0001 C CNN
 	1    2150 3075
 	1    0    0    -1  
 $EndComp
-Text GLabel 1450 3375 0    50   Input ~ 0
+Text GLabel 1050 3375 0    50   Input ~ 0
 P26
-Text GLabel 1450 3475 0    50   Input ~ 0
+Text GLabel 1050 3475 0    50   Input ~ 0
 P0
 Text Notes 1800 2800 0    79   ~ 0
 I2C IO Expansion
@@ -1810,4 +1810,64 @@ F 3 "" H 9600 6250 50  0001 C CNN
 	1    9600 6250
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 6047BDF6
+P 1350 3200
+AR Path="/6047BDF6" Ref="R?"  Part="1" 
+AR Path="/6017311C/6047BDF6" Ref="R7"  Part="1" 
+F 0 "R7" H 1409 3246 50  0000 L CNN
+F 1 "10K" H 1409 3155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1350 3200 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" H 1350 3200 50  0001 C CNN
+F 4 "C25804" H 1350 3200 50  0001 C CNN "LCSC"
+F 5 "BASIC" H 1350 3200 50  0001 C CNN "Type"
+	1    1350 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 6047C966
+P 1150 3000
+AR Path="/6047C966" Ref="R?"  Part="1" 
+AR Path="/6017311C/6047C966" Ref="R6"  Part="1" 
+F 0 "R6" H 1209 3046 50  0000 L CNN
+F 1 "10K" H 1209 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1150 3000 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Uniroyal-Elec-0603WAF1002T5E_C25804.pdf" H 1150 3000 50  0001 C CNN
+F 4 "C25804" H 1150 3000 50  0001 C CNN "LCSC"
+F 5 "BASIC" H 1150 3000 50  0001 C CNN "Type"
+	1    1150 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Tensile_Board:+3.3V_TS #PWR0111
+U 1 1 6047D0EA
+P 1150 2900
+F 0 "#PWR0111" H 1150 2750 50  0001 C CNN
+F 1 "+3.3V_TS" H 1165 3073 50  0000 C CNN
+F 2 "" H 1150 2900 50  0001 C CNN
+F 3 "" H 1150 2900 50  0001 C CNN
+	1    1150 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 2900 1350 2900
+Wire Wire Line
+	1350 2900 1350 3100
+Connection ~ 1150 2900
+Wire Wire Line
+	1350 3300 1350 3375
+Wire Wire Line
+	1350 3375 1450 3375
+Wire Wire Line
+	1150 3100 1150 3475
+Wire Wire Line
+	1150 3475 1450 3475
+Wire Wire Line
+	1150 3475 1050 3475
+Connection ~ 1150 3475
+Wire Wire Line
+	1050 3375 1350 3375
+Connection ~ 1350 3375
 $EndSCHEMATC
